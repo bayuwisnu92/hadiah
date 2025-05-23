@@ -117,7 +117,7 @@
     </div>
     
     <div id="hiddenContent" class="hidden-content">
-        <img src="lucu.jpg" alt="Hantu" onclick="tutupHadiah()">
+        <img src="lucu.jpg" alt="Hantu" onclick="tutupHadiah()" width="100%" height="100%">
         <!-- <button class="btn" onclick="tutupHadiah()" style="background-color: #f44336; margin-top: 20px;">TUTUP! 😱</button> -->
     </div>
     
@@ -132,7 +132,7 @@
     <script>
         setTimeout(() => {
             bukaHadiah();
-        }, 2500);
+        }, 2000);
 
         function bukaHadiah() {
             // Ganti background jadi seram
@@ -145,9 +145,7 @@
             // Mainkan suara teriakan
             const scream = document.getElementById('screamSound');
             scream.currentTime = 0;
-            scream.play().catch(e => {
-                alert("buka hadiahnya ??");
-            });
+            scream.play()
             
             // Aktifkan efek visual
             const soundWave = document.getElementById('soundWave');
